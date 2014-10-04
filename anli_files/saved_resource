@@ -1,0 +1,231 @@
+var gid = "b4ec963b-b5fd-489a-8933-f5b74220eb35";
+var cgid = "c21a22ba-fa17-4faa-af67-632e63b4881a";
+var vgid = "a2bda45c-b53f-4dd1-960c-74bb5dfd0635";
+var lvt = "2013-9-6 13:11:06";
+var asi = "http://an.lvshou.com/";
+var wid = "Lvshou";
+
+    var uri = "";
+    var ut = "";
+    var rf = "";
+    var st = lvt;
+    var vt = lvt;
+    var inv = false;
+    var tz = 0;
+    var sc = "";
+    var sz = "";
+    var fv = "";
+    var sp = -1;
+    var puri = asi + "Analytics/Default.ashx";
+    function iw() {
+        ick();
+        uri = gu();
+        tz = gtz();
+        rf = grf();
+        sc = gsc();
+        sz = gss();
+        fv = gfv();
+        ut = gt();
+        iivt();
+        PostData();
+    }
+    function up() {
+        var p = puri + "?gid=" + gid;
+        p += "&vt=" + vt;
+        var i3 = new Image(0, 0); i3.src = p; i3.onload = function () { };
+    }
+    function OnIM() {
+        var p = puri + "?gid=" + gid;
+        p += "&IsIM=true";
+        var i2 = new Image(0, 0); i2.src = p; i2.onload = function () { };
+    }
+    function PostData() {
+        var p = GetPostURL();
+        var i1 = new Image(0, 0); i1.src = p; i1.onload = function () { };
+    }
+    function GetPostURL() {
+        var p = puri + "?gid=" + gid;
+        p += "&vgid=" + escape(vgid);
+        p += "&cgid=" + escape(cgid);
+        p += "&uri=" + escape(uri);
+        p += "&ut=" + escape(ut);
+        p += "&rf=" + escape(rf);
+        p += "&fv=" + escape(fv);
+        p += "&tz=" + escape(tz);
+        p += "&sc=" + escape(sc);
+        p += "&sz=" + escape(sz);
+        p += "&sp=" + escape(sp.toString());
+        p += "&inv=" + escape(inv);
+        p += "&lvt=" + escape(lvt);
+        p += "&vt=" + escape(vt);
+        if (typeof LoginMemberUID != 'undefined')
+            p += "&LoginMemberUID=" + escape(LoginMemberUID);
+        if (typeof RegisterUID != 'undefined')
+            p += "&RegisterUID=" + escape(RegisterUID);
+        p += "&sid=" + escape(wid);
+        return p;
+    }
+    function gt() {
+        var dt = document.title;
+        try {
+            if (CheckNull(dt)) {
+                var tt = document.getElementsByTagName("title");
+                if (!CheckNull(tt) && tt && tt.length > 0) {
+                    dt = tt[0].innerText;
+                } else {
+                    dt = "";
+                }
+            }
+        } catch (e) { }
+        return dt;
+    }
+    function gu() {
+        var uri = "";
+        try { uri = sd(document.URL, uri); } catch (e) { }
+        try { uri = sd(window.location, uri); } catch (e) { }
+        try { uri = sd(window.parent.location, uri); } catch (e) { }
+        return uri;
+    }
+    function iivt() {
+        var tlvt = gck("lvt");
+        sck("lvt", lvt, gd());
+        if (!CheckNull(tlvt)) {
+            lvt = tlvt;
+        }
+    }
+    function CheckNull(data) {
+        return (typeof data == 'undefined' || data == null || data == '')
+    }
+    function ick() {
+        if (typeof visitorUnID == 'undefined') {
+            var cookieGID = gck("cgid");
+            if (!CheckNull(cookieGID)) {
+                cgid = cookieGID;
+                inv = false;
+            }
+            else {
+                sck("cgid", cgid, gd());
+                inv = true;
+            }
+        }
+        else {
+            cgid = visitorUnID;
+        }
+        if (typeof CarID == 'undefined') {
+            var visitorGID = gck("vgid");
+            if (!CheckNull(visitorGID)) {
+                vgid = visitorGID;
+            }
+            else {
+                document.cookie = "vgid=" + vgid + ";path=/";
+            }
+        }
+        else {
+            vgid = CarID;
+        }
+    }
+
+    function gd() {
+        var exp = new Date(); exp.setTime(exp.getTime() + 30 * 12 * 31 * (24 * 60 * 60 * 1000)); return exp;
+    }
+
+    function gtz() {
+        return temptz = 0 - ((new Date()).getTimezoneOffset() / 60);
+    }
+
+    function grf() {
+        var tr = "";
+        try { tr = sd(document.referrer, tr); } catch (e) { }
+        try { tr = sd(top.document.referrer, tr); } catch (e) { }
+        try { tr = sd(window.parent.document.referrer, tr); } catch (e) { }
+        return tr;
+    }
+    function sd(ds, data) {
+        td = data;
+        try {
+            if (ds && ds != '') {
+                if (td == '')
+                    td = ds;
+            }
+        }
+        catch (e) { }
+        return td;
+    }
+    function gss() {
+        var tsz = "";
+        if (window.self.screen) {
+            tsz = window.self.screen.width + "x" + window.self.screen.height;
+        }
+        else {
+            if (window.self.java) {
+                var j = window.self.java.awt.Toolkit.getDefaultToolkit();
+                var s = j.getScreenSize();
+                tsz = s.width + "x" + s.height;
+            }
+        }
+        return tsz;
+    }
+    function gsc() {
+        var tc = "";
+        if (window.self.screen) {
+            if (window.self.screen.colorDepth) {
+                tc = window.self.screen.colorDepth;
+            }
+            else if (window.self.screen.screen.pixelDepth) {
+                tc = window.self.screen.screen.pixelDepth;
+            }
+        }
+        return tc;
+    }
+    function gfv() {
+        var f = "-", n = window.navigator;
+        if (n.plugins && n.plugins.length) {
+            for (var i = 0; i < n.plugins.length; i++) {
+                if (n.plugins[i].name.indexOf('Shockwave Flash') != -1) {
+                    f = n.plugins[i].description.split('Shockwave Flash ')[1];
+                    break;
+                }
+            }
+        }
+        else if (window.ActiveXObject) {
+            for (var j = 10; j >= 2; j--) {
+                try {
+                    var fl = eval("new ActiveXObject('ShockwaveFlash.ShockwaveFlash." + j + "');");
+                    if (fl) {
+                        f = j + '.0';
+                        break;
+                    }
+                }
+                catch (e) { }
+            }
+        }
+        return f;
+    }
+    function sck(name, value, expiry) {
+        document.cookie = name + "=" + value + ";expires=" + expiry.toGMTString() + ";path=/";
+    }
+    function gck(name) {
+        var iscf = false;
+        var start = 0;
+        var end = 0;
+        var cks = document.cookie;
+        var i = 0;
+        while (i <= cks.length) {
+            start = i;
+            end = start + name.length;
+            if (cks.substring(start, end) == name) {
+                iscf = true;
+                break;
+            }
+            i++;
+        }
+        if (iscf) {
+            start = end + 1;
+            end = cks.indexOf(";", start);
+            if (end < start)
+                end = cks.length;
+            return unescape(cks.substring(start, end));
+        }
+        return "";
+    }
+    iw();

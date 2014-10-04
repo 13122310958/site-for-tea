@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+body{font-family: 宋体;font-size: 12px;line-height:1.5em;color:#666666; background-color:transparent;}
+ul,li{ list-style:none; margin:0; padding:0; overflow:hidden}
+.green {color:#090;font-weight: bold;}
+.red {color:#F30;}
+li{ background:url(pj.gif) no-repeat 0 8px; line-height:30px; padding-left:20px; }
+.list{width:500px; float:left}
+.pj{width:440px; float:right;}
+.pj li{background-image:url(hp.gif) no-repeat;}
+#demo2 li{ color:#333;background:url(hp.gif) no-repeat 0 8px;}
+</style>
+
+</head>
+
+<body>
+<div style="width:1005px;  margin:0 auto">
+  <div class="list">
+    <div id="srcorder" style="overflow:hidden; height:400px;">
+      <div id="demo1">
+	  <ul>
+	  <script type="text/javascript">	
+	var kuaidi=['顺丰快递','中通快递'];
+	var kuaidino = ["571***xxxx","6544****xxxx"];
+	var area = ['河北','四川','安徽','山东','广东'];
+	var names = ['王女士','罗女士','周小姐','马先生','于女士','狄先生','高先生'];
+	var products = ['汉方养瘦（一个疗程）三盒装','速效瘦身（二个疗程）六盒装','一盒体验装','终极瘦身（三个疗程）九盒装'];
+	var status_array = ['已成交','已发货'];
+	var linetpl = '<li>{:kuaidi}：<span class="red">{:kuaidino}（{:area}{:name}）</span>{:product} 订单确认已<span class="red">{:status}</span></li>';
+	function random(min,max){
+		return parseInt(Math.random() * (max-min) + min);
+	}
+	Array.prototype.random = function(){
+		return this[random(0,this.length)];
+	}
+	function randomNumber(){
+		return random(0,10);
+	}
+	function newEntry(){
+		var o = {};
+		var i = random(0,kuaidi.length);
+		o.kuaidi = kuaidi[i];
+		o.kuaidino = kuaidino[i].replace(/x/g,randomNumber);
+		o.area = area.random();
+		o.name = names.random();
+		o.product = products.random();
+		o.status = status_array.random();
+		return o;
+	}
+	function format(str,param){
+		return str.replace(/\{:(\w+)\s*\}/g,function(match,key,index){
+			return param[key] ? param[key] : '';
+		});
+	}
+	var html = "";
+	if(!/:flag$/.test(window.name)){
+		for(var i=0;i<20;i++){
+			html +=format(linetpl,newEntry());
+		}
+		window.name = html+":flag";
+	}else{
+		html = window.name.substring(0,window.name.length - 5);
+	}
+	document.write(html);
+</script>
+	  </ul>
+      </div>
+      <div id="demo11"></div>
+    </div>
+  </div>
+  <div class="pj">
+    <div id="srccomment" style="overflow:hidden; height:400px;">
+      <div id="demo2">
+        <ul>
+          <li>来自<span class="green">王女士</span>说：效果不错，比我以前那些产品效果好</li>
+          <li>来自<span class="green">张女士</span>说：东西很好啊！用的很不错！价格很实惠</li>
+          <li>来自<span class="green">陈女士</span>说：没想到效果那么好。</li>
+          <li>来自<span class="green">余女士</span>说：还不错，正规产品</li>
+          <li>来自<span class="green">杨女士</span>说：解决了我多年的烦恼啊，太感谢了！</li>
+          <li>来自<span class="green">李女士</span>说：果然很神奇啊，非常满意。</li>
+          <li>来自<span class="green">刘女士</span>说：少了10斤，效果很给力！</li>
+          <li>来自<span class="green">任女士</span>说：说的挺好，可不知道东西怎么样</li>
+          <li>来自<span class="green">崔女士</span>说：效果非常给力!会帮忙推荐的!</li>
+          <li>来自<span class="green">夏先生</span>说：给女朋友买的，她很满意。</li>
+          <li>来自<span class="green">刘女士</span>说：服务态度很好,信的过的商家!</li>
+          <li>来自<span class="green">王女士</span>说：送货特快！</li>
+          <li>来自<span class="green">李女士</span>说：货到手，包装挺不错的，期待效果</li>
+          <li>来自<span class="green">张女士</span>说：快递态度很好！</li>
+          <li>来自<span class="green">许女士</span>说：客服很耐心也很热心 谢谢</li>
+        </ul>
+      </div>
+      <div id="demo22"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+   var speed=30
+   demo11.innerHTML=demo1.innerHTML //克隆demo1为demo2
+   function Marquee(){
+   if(demo11.offsetTop-srcorder.scrollTop<=0) //当滚动至demo1与demo2交界时
+   srcorder.scrollTop-=demo1.offsetHeight   //demo跳到最顶端
+   else{
+   		srcorder.scrollTop++
+   }
+   }
+   var MyMar=setInterval(Marquee,speed) //设置定时器
+   srcorder.onmouseover=function() {clearInterval(MyMar)}//鼠标移上时清除定时器达到滚动停止的目的
+   srcorder.onmouseout=function() {MyMar=setInterval(Marquee,speed)}//鼠标移开时重设定时器
+	//
+   demo22.innerHTML=demo2.innerHTML //克隆demo1为demo2
+   function Marquee2(){
+   if(demo22.offsetTop-srccomment.scrollTop<=0) //当滚动至demo1与demo2交界时
+   srccomment.scrollTop-=demo2.offsetHeight   //demo跳到最顶端
+   else{
+   		srccomment.scrollTop++
+   }
+   }
+   var MyMar2=setInterval(Marquee2,speed) //设置定时器
+   srccomment.onmouseover=function() {clearInterval(MyMar2)}//鼠标移上时清除定时器达到滚动停止的目的
+   srccomment.onmouseout=function() {MyMar2=setInterval(Marquee2,speed)}//鼠标移开时重设定时器
+   </script>
+
+</body>
+</html>

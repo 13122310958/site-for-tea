@@ -1,0 +1,15 @@
+@charset "gb2312";
+/* CSS Document */
+.fdtbox{margin:0 auto;width:1001px;overflow:hidden;background:url(dg_bg.gif) repeat-x;height:48px;}
+.fdtbox ul,.fdtbox li{margin:0;padding:0}
+.fdtbox li{ float:left; display:block;}
+#youhuidaima{font-size:26px;font-family:Verdana, Geneva, sans-serif;color:#F00; line-height:48px;}
+li.spbt{ float:right; padding-right:10px;}
+
+/* 除IE6浏览器的通用方法 */
+.fdt{position:fixed;left:0;bottom:0}
+.fdt{position:fixed;right:0;bottom:0}
+/* IE6浏览器的特有方法 *//* 修正IE6振动bug */
+* html,* html body{background-image:url(about:blank);background-attachment:fixed}
+* html .fdt{position:absolute;left:expression(eval(document.documentElement.scrollLeft));top:expression(eval(document.documentElement.scrollTop))}
+* html .fdt{position:absolute;left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))}

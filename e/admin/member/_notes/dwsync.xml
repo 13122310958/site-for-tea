@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AddBuyGroup.php" server="118.119.254.27/www/" local="130454851032178637" remote="129848544000000000" Dst="0" />
+<file name="AddCard.php" server="118.119.254.27/www/" local="130454851032588660" remote="129125376000000000" Dst="0" />
+<file name="AddMember.php" server="118.119.254.27/www/" local="130454851035288815" remote="129967776000000000" Dst="0" />
+<file name="AddMemberF.php" server="118.119.254.27/www/" local="130454851035298815" remote="129848544000000000" Dst="0" />
+<file name="AddMemberForm.php" server="118.119.254.27/www/" local="130454851035678837" remote="129848544000000000" Dst="0" />
+<file name="AddMemberGroup.php" server="118.119.254.27/www/" local="130454851038529000" remote="129784608000000000" Dst="0" />
+<file name="AddMoreCard.php" server="118.119.254.27/www/" local="130454851038529000" remote="129125376000000000" Dst="0" />
+<file name="AddSpaceStyle.php" server="118.119.254.27/www/" local="130454851038569002" remote="130026528000000000" Dst="0" />
+<file name="ClearMember.php" server="118.119.254.27/www/" local="130454851041379163" remote="129851136000000000" Dst="0" />
+<file name="DelMoreMsg.php" server="118.119.254.27/www/" local="130454851041399164" remote="129784608000000000" Dst="0" />
+<file name="GetFen.php" server="118.119.254.27/www/" local="130454851041409165" remote="129851136000000000" Dst="0" />
+<file name="ListBuyBak.php" server="118.119.254.27/www/" local="130454851044589347" remote="129851136000000000" Dst="0" />
+<file name="ListBuyGroup.php" server="118.119.254.27/www/" local="130454851045059374" remote="129551328000000000" Dst="0" />
+<file name="ListCard.php" server="118.119.254.27/www/" local="130454851046699467" remote="129907296000000000" Dst="0" />
+<file name="ListDownBak.php" server="118.119.254.27/www/" local="130454851046719469" remote="129851136000000000" Dst="0" />
+<file name="ListMember.php" server="118.119.254.27/www/" local="130454851048719583" remote="129916800000000000" Dst="0" />
+<file name="ListMemberF.php" server="118.119.254.27/www/" local="130454851049059602" remote="129374208000000000" Dst="0" />
+<file name="ListMemberForm.php" server="118.119.254.27/www/" local="130454851049059602" remote="129551328000000000" Dst="0" />
+<file name="ListMemberGroup.php" server="118.119.254.27/www/" local="130454851051869763" remote="129851136000000000" Dst="0" />
+<file name="ListSpaceStyle.php" server="118.119.254.27/www/" local="130454851051879764" remote="129551328000000000" Dst="0" />
+<file name="MemberConnect.php" server="118.119.254.27/www/" local="130454851052099776" remote="129940128000000000" Dst="0" />
+<file name="MemberFeedback.php" server="118.119.254.27/www/" local="130454851054909937" remote="129851136000000000" Dst="0" />
+<file name="MemberGbook.php" server="118.119.254.27/www/" local="130454851054919938" remote="129851136000000000" Dst="0" />
+<file name="MemberShowFeedback.php" server="118.119.254.27/www/" local="130454851055219955" remote="129851136000000000" Dst="0" />
+<file name="SendEmail.php" server="118.119.254.27/www/" local="130454851057760100" remote="129851136000000000" Dst="0" />
+<file name="SendMsg.php" server="118.119.254.27/www/" local="130454851057760100" remote="129851136000000000" Dst="0" />
+<file name="SetMemberConnect.php" server="118.119.254.27/www/" local="130454851057800102" remote="129936672000000000" Dst="0" />
+<file name="index.php" server="118.119.254.27/www/" local="130454851060570261" remote="128899872000000000" Dst="0" />
+</dwsync>

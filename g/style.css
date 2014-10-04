@@ -1,0 +1,47 @@
+/* CSS Document */
+
+html{width:320px; margin:0 auto;}
+body{font-size:12px;}
+body,ul,li,h1,h2,h3,p,dt,dd,tl{padding:0;margin:0;}
+img { border:0;}
+.fr{ float:right}
+.blockimg{ display:block;}
+nav{padding:10px 0;}
+nav table{width:100%; text-align:center}
+nav td img{ display:inline}
+.text{font-size:12px; padding:10px 10px 10px 20px; line-height:1.2;}
+.bg1{ background:url(images/bg.png) no-repeat center top; height:202px;}
+.text2{ padding:8px 10px; line-height:1.2; color:#309b25;}
+.taocan{padding-left:164px; padding-right:.5em; padding-bottom:1em; margin-bottom:1em; border-bottom:1px dotted #2eaf21}
+.tc1{ background:url(images/taocan_p1.png) no-repeat left top;}
+.tc2{ background:url(images/taocan_p2.png) no-repeat left top;}
+.tc3{ background:url(images/taocan_p3.png) no-repeat left top;}
+.tc4{ background:url(images/taocan_p4.png) no-repeat left top; border-bottom:none; }
+
+.taocan label{ display:inline-block; background:#585657; color:#fff; padding:2px 5px; margin-right:5px;}
+.taocan p{ line-height:1.5em; color:#585657; height:145px;}
+.taocan .btn{ text-align:right; padding-right:1em; }
+.form-text{width:96%;}
+.form{ line-height:1.2em;}
+.form .label{ vertical-align:top; padding-top:5px;}
+.form .guest{width:96%; height:5em;}
+footer{margin-top:1em; padding-bottom:2em; text-align:center; line-height:1.5em;}
+footer .green{height:2em; background:#d9f6ae; margin-bottom:10px;}
+footer a{color:#545454;}
+
+
+
+.question .qt{font-size:16px; color:#cd1150; padding:1em .7em .7em; border-bottom:1px solid #c6c6c6;}
+.question .qa{line-height:1.5em; padding: .7em; font-family:"ËÎÌו"}
+.qa p{ text-indent:2em; margin-bottom:.7em;}
+
+
+.case-nav{ line-height:1.5;margin-bottom:.5em; padding-left:.4em;}
+.case-nav a{ color:inherit; text-decoration:none; white-space:nowrap;}
+.case-nav .on{color:#ff679a;}
+.case-item{ clear:both; display:none;}
+.case-item .than{ background:#ff679a; white-space:nowrap; padding:1px 10px ; color:#fff;}
+.case-item .fr{ margin-left:10px;}
+.case-item .red{color:#ff679a;}
+.case-item td{ line-height:1.8; vertical-align:top}
+.case-item p{padding:10px; line-height:1.5; text-indent:2em;}
